@@ -109,18 +109,6 @@ app.component('answer-input', {
       inputAnswer: '',
     }
   },
-  
-  app.component('answer-input2', {
-  props: ['correct'],
-  data: function () {
-    return {
-      /* 送信ボタン上下に表示されるメッセージ */
-      okMessage: '正解！B',
-      ngMessage: 'そのキーワードは違うようだぞ！？',
-      message: '',
-      inputAnswer: '',
-    }
-  },
     
   template: `
     <div class="answer__container">
