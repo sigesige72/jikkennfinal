@@ -120,12 +120,20 @@ app.component('answer-input', {
       <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
       <button v-on:click="judgement(inputAnswer)">送信</button>
       <p v-if="message === okMessage１" class="err-message">{{ message }}</p>
+      <p v-if="message === okMessage２" class="err-message">{{ message }}</p>
+      <p v-if="message === okMessage３" class="err-message">{{ message }}</p>
     </div>`,
   methods: {
     judgement(answer) {
       if(answer === this.correct) { // 入力値が解答と一致する場合
         this.message = this.okMessage１;
         this.$emit('answerInput', true);
+      } else if { // 一致しない場合
+        this.message = this.okMessage2; 
+        this.$emit('answerInput', false);
+      } else if { // 一致しない場合
+        this.message = this.okMessage3; 
+        this.$emit('answerInput', false);
       } else { // 一致しない場合
         this.message = this.ngMessage; 
         this.$emit('answerInput', false);
