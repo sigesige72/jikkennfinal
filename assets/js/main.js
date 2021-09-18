@@ -125,12 +125,12 @@ app.component('answer-input', {
     </div>`,
   methods: {
     judgement(answer) {
-      if(answer === q１.correct) { // 入力値が解答と一致する場合
-        q１.message = q１.okMessage１;
-        q１.$emit('answerInput', true);
-      } else if(answer === q２.correct) { // 一致しない場合
-        q２.message = q２.okMessage2; 
-        q２.$emit('answerInput', false);
+      if(answer === this.correct) { // 入力値が解答と一致する場合
+        this.message = this.okMessage１;
+        this.$emit('answerInput', true);
+      } else if(answer === this.correct) { // 一致しない場合
+        this.message = this.okMessage2; 
+        this.$emit('answerInput', false);
       } else { // 一致しない場合
         this.message = this.ngMessage; 
         this.$emit('answerInput', false);
