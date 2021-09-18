@@ -103,7 +103,9 @@ app.component('answer-input', {
   data: function () {
     return {
       /* 送信ボタン上下に表示されるメッセージ */
-      okMessage: '正解！A',
+      okMessage１: '正解！１',
+      okMessage２: '正解！２',
+      okMessage３: '正解！３',
       ngMessage: 'そのキーワードは違うようだぞ！？',
       message: '',
       inputAnswer: '',
@@ -117,12 +119,12 @@ app.component('answer-input', {
       </div>
       <p v-if="message === ngMessage" class="err-message">{{ message }}</p>
       <button v-on:click="judgement(inputAnswer)">送信</button>
-      <p v-if="message === okMessage" class="err-message">{{ message }}</p>
+      <p v-if="message === okMessage１" class="err-message">{{ message }}</p>
     </div>`,
   methods: {
     judgement(answer) {
       if(answer === this.correct) { // 入力値が解答と一致する場合
-        this.message = this.okMessage;
+        this.message = this.okMessage１;
         this.$emit('answerInput', true);
       } else { // 一致しない場合
         this.message = this.ngMessage; 
