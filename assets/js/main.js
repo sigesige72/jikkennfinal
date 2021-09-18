@@ -125,9 +125,9 @@ app.component('answer-input', {
     </div>`,
   methods: {
     judgement(answer) {
-      if(answer === this.correct) { // 入力値が解答と一致する場合
-        this.message = this.okMessage１;
-        this.$emit('answerInput', true);
+      if(answer === q１.correct) { // 入力値が解答と一致する場合
+        q１.message = q１.okMessage１;
+        q１.$emit('answerInput', true);
       } else if { // 一致しない場合
         this.message = this.okMessage2; 
         this.$emit('answerInput', false);
